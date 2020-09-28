@@ -40,7 +40,7 @@
    
    Add in handle function test code given below and 
   then `php artisan testCommand:run` to run code manually
-    or `php artisan schedule:run` to run code with this app
+    or `php artisan schedule:run` to run code with this app **after creating some task**
    
          
          {
@@ -51,5 +51,7 @@
          
 ### 3. Important step ADD this to the cron tab to automate the task.
 
-    * * * * * cd /path-to-your-project && php artisan schedule:run >> /dev/null 2>&1           
+    * * * * * cd /path-to-your-project && php artisan schedule:run >> /dev/null 2>&1     
+    
+#### Note "* * * * *" represents cron expression in this case "run every minute"     
 
